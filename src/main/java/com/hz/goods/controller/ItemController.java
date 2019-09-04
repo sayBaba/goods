@@ -22,8 +22,15 @@ public class ItemController {
     @RequestMapping("item/{id}")
     public Item queryItemById(@PathVariable("id") Long id) {
         System.err.println("-------goods---------");
+//        int  a = 100/0;
         return itemService.queryItemById(id);
     }
 
-
+    @ResponseBody
+    @RequestMapping("test/{id}")
+    public String test(@PathVariable("id") Long id) {
+        return "666";
     }
+
+
+}
